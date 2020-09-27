@@ -23,7 +23,7 @@ app.use(express.json()); // as body is json
 
 const bcrypt = require('bcrypt-nodejs')
 
-//app.get('/', (req, res) => { res.send(db.users)})
+app.get('/', (req, res) => { res.send('It is working')})
 
 app.post('/signin', (req, res) => { signin.handleSignin(req, res, db, bcrypt)})
 app.post('/register', (req, res) => { register.handleRegister(req, res, db, bcrypt)})
